@@ -1,0 +1,130 @@
+{
+    "BTCUSDT-15m": {
+        "name": "Sentez_MACD_Buy_&_OBV_Buy",
+        "type": "CONFLUENCE",
+        "params": {
+            "buy_rules": [
+                {
+                    "indicator": "MACD",
+                    "condition": "cross_above_signal",
+                    "params": {
+                        "fast_period": 12,
+                        "slow_period": 26,
+                        "signal_period": 9
+                    }
+                },
+                {
+                    "indicator": "OBV",
+                    "condition": "cross_above_sma",
+                    "params": {
+                        "obv_sma_period": 20
+                    }
+                }
+            ],
+            "sell_rules": [
+                {
+                    "indicator": "MACD",
+                    "condition": "cross_below_signal",
+                    "params": {
+                        "fast_period": 12,
+                        "slow_period": 26,
+                        "signal_period": 9
+                    }
+                },
+                {
+                    "indicator": "OBV",
+                    "condition": "cross_below_sma",
+                    "params": {
+                        "obv_sma_period": 20
+                    }
+                }
+            ],
+            "buy_quorum": 2,
+            "sell_quorum": 2
+        }
+    },
+    "ETHUSDT-15m": {
+        "name": "MA_Cross_Buy",
+        "type": "CONFLUENCE",
+        "params": {
+            "buy_rules": [
+                {
+                    "indicator": "MA_CROSS",
+                    "condition": "cross_above",
+                    "params": {
+                        "fast_period": 20,
+                        "slow_period": 50
+                    }
+                }
+            ],
+            "sell_rules": [
+                {
+                    "indicator": "MA_CROSS",
+                    "condition": "cross_below",
+                    "params": {
+                        "fast_period": 20,
+                        "slow_period": 50
+                    }
+                }
+            ],
+            "buy_quorum": 1,
+            "sell_quorum": 1
+        }
+    },
+    "BNBUSDT-15m": {
+        "name": "RSI_Buy",
+        "type": "CONFLUENCE",
+        "params": {
+            "buy_rules": [
+                {
+                    "indicator": "RSI",
+                    "condition": "cross_above",
+                    "value": 30,
+                    "params": {
+                        "rsi_period": 14
+                    }
+                }
+            ],
+            "sell_rules": [
+                {
+                    "indicator": "RSI",
+                    "condition": "cross_below",
+                    "value": 70,
+                    "params": {
+                        "rsi_period": 14
+                    }
+                }
+            ],
+            "buy_quorum": 1,
+            "sell_quorum": 1
+        }
+    },
+    "SOLUSDT-15m": {
+        "name": "MA_Cross_Buy",
+        "type": "CONFLUENCE",
+        "params": {
+            "buy_rules": [
+                {
+                    "indicator": "MA_CROSS",
+                    "condition": "cross_above",
+                    "params": {
+                        "fast_period": 20,
+                        "slow_period": 50
+                    }
+                }
+            ],
+            "sell_rules": [
+                {
+                    "indicator": "MA_CROSS",
+                    "condition": "cross_below",
+                    "params": {
+                        "fast_period": 20,
+                        "slow_period": 50
+                    }
+                }
+            ],
+            "buy_quorum": 1,
+            "sell_quorum": 1
+        }
+    }
+}

@@ -1,0 +1,19 @@
+# Sanal ortam klasörü
+venv-py311/
+venv/
+
+# Python cache dosyaları
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Hassas bilgileri içeren environment dosyası
+.env
+
+# Ajanın çalışma sırasında ürettiği geçici dosyalar
+champions.json
+positions.json
+
+# macOS sistem dosyaları
+.DS_Store
